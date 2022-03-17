@@ -1,1 +1,71 @@
 /* You can add global styles to this file, and also import other style files */
+app-root{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100vh;
+}
+app-user-container{
+    display: flex;
+    background-color: aqua;
+    justify-content: space-around;
+    height: 90%;
+    width: 47%;
+    align-items: center;
+}
+app-order-container{
+    display: flex;
+    background-color: yellow;
+    justify-content: center;
+    height: 90%;
+    width: 47%;
+    align-items: center;
+}
+app-user-list{
+    display: flex;
+    flex-direction: column;
+    background-color: greenyellow;
+    height: 75%;
+    width: 45%;
+    align-items: center;
+}
+app-order-list{
+    display: flex;
+    flex-direction: column;
+    background-color: darkorchid;
+    height: 75%;
+    width: 90%;
+    align-items: center;
+}
+app-user-detail{
+    display: flex;
+    justify-content: center;
+    background-color: yellow;
+    height: 75%;
+    width: 45%;
+}
+app-user-single{
+    display: flex;
+    background-color: orange;
+    align-items: center;
+    justify-content: center;
+    margin: 2%;
+}
+app-order-single{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: aquamarine;
+    margin: auto;
+    height: 22%;
+    width: 95%;
+}
+app-order-detail{
+    background-color: lime;
+}
+.center-p{
+    position: absolute;
+    display: flex;
+    align-self: stretch;
+    margin-top: -0.4%;    
+}
