@@ -3,13 +3,16 @@ app-root{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     height: 100vh;
+    background-color: lightgray;
+    margin: 1%;
 }
 app-user-container{
     display: flex;
     background-color: aqua;
     justify-content: space-around;
-    height: 90%;
+    height: 80%;
     width: 47%;
     align-items: center;
 }
@@ -17,7 +20,7 @@ app-order-container{
     display: flex;
     background-color: yellow;
     justify-content: center;
-    height: 90%;
+    height: 80%;
     width: 47%;
     align-items: center;
 }
@@ -50,6 +53,7 @@ app-user-single{
     align-items: center;
     justify-content: center;
     margin: 2%;
+    width: 45%;
 }
 app-order-single{
     display: flex;
@@ -61,11 +65,18 @@ app-order-single{
     width: 95%;
 }
 app-order-detail{
+    display: flex;
     background-color: lime;
+    width: 45%;
+    align-items: center;
+    justify-content: center;
 }
 .center-p{
     position: absolute;
     display: flex;
     align-self: stretch;
-    margin-top: -0.4%;    
+    margin-top: -0.1%;    
+}
+app-user-list>app-user-single {
+    width: 90%;
 }
