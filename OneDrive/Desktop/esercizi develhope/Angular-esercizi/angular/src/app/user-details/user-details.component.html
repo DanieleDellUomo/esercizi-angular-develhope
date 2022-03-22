@@ -1,0 +1,19 @@
+<div>
+    <p>Id: {{user.id}}</p>
+    <p>Name: {{user.name}}</p>
+    <p>Surname: {{user.surname}}</p>
+    <p>Age: {{user.age}}</p>
+    <p>Date of birth: {{user.dateOfBirth | date: 'dd-MMM--yyyy' }}</p>
+    <p><strong>Address: </strong></p>
+    <p>City: {{user.address.city}}</p>
+    <p>Street: {{user.address.street}}</p>
+    <p>PostalCode: {{user.address.postalCode}}</p>
+    <p>Role: {{user.role}}</p>
+    <p>Username: {{user.username}}</p>
+    <p><img src="{{user.profilePhotoUrl}}" style="height: 200px; width: 275px;"></p>
+    <p>Gender: {{user.gender}}</p>
+    <p><strong>Company: </strong>{{user.companies[0].name}}</p>
+    <p>Description: {{user.companies[0].description}}</p>
+    <p><strong>Company: </strong>{{user.companies[1].name}}</p>
+    <p>Description: {{user.companies[1].description}}</p>
+</div>
