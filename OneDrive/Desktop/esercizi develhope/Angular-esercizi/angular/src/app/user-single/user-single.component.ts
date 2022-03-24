@@ -10,10 +10,10 @@ export class UserSingleComponent implements OnInit {
 
   @Input() singleE: iUser[] = [];
 
-  @Output() deleteUser = new EventEmitter<iUser>();
+  @Output() deleteE = new EventEmitter<iUser>();
 
   deletElement(user: iUser) {
-    this.deleteUser.emit({ ...user })
+    this.deleteE.emit({ ...user })
   }
 
 
