@@ -8,6 +8,11 @@ import { iUser, Role, Gender } from "src/app/interface/interface.component";
 })
 export class UserListComponent{
 
+  deleteUser(selectedUser: iUser){
+    this.list.splice(this.list.findIndex((i)=> i.id == selectedUser.id),1)
+  }
+
+
   list: iUser[] = [
     {
         id: 3487,
