@@ -1,6 +1,12 @@
 <div *ngIf="singleE.length == 0; else bloccoElse">Non sono presenti Utenti</div>
 <ng-template #bloccoElse>
-<div *ngFor="let user of singleE; let i = index;">
+<div *ngFor="let user of singleE; let i = index;"
+[ngClass]="{
+    manager: user.role == 'manager',
+    admin: user.role == 'admin',
+    staff: user.role == 'staff'
+  }"
+>
     {{ i + 1 }}.<img src="{{ user.profilePhotoUrl }}">&nbsp;
     <strong>{{ user.name }}</strong>&nbsp;<strong>{{ user.surname }}</strong>&nbsp;
     {{ user.age }}&nbsp;

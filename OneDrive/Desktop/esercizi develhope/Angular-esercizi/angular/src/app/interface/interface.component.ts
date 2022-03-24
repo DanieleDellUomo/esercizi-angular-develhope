@@ -37,8 +37,8 @@ export enum Gender {
   OTHER,
 }
 export enum Role {
-  STAFF,
-  MANAGER,
-  ADMIN,
+  STAFF = "staff",
+  MANAGER = "manager",
+  ADMIN = "admin",
 }
 

@@ -1,10 +1,18 @@
 div {
     display: flex;
-    
     align-items: center;
-    
+    margin-top: 10px;
 }
 img {
     height: 50px;
     width: 50px;
+}
+.manager{
+    border: solid red;
+}
+.admin{
+    border: solid yellow;
+}
+.staff{
+    border: solid green;
 }
