@@ -1,3 +1,5 @@
+<div *ngIf="singleE.length == 0; else bloccoElse">Non sono presenti Utenti</div>
+<ng-template #bloccoElse>
 <div *ngFor="let user of singleE; let i = index;">
     {{ i + 1 }}.<img src="{{ user.profilePhotoUrl }}">&nbsp;
     <strong>{{ user.name }}</strong>&nbsp;<strong>{{ user.surname }}</strong>&nbsp;
@@ -5,4 +7,4 @@
     {{ user.address.city }}
     <button (click)="deletElement(user)">Delete</button>
 </div>
-
+</ng-template>

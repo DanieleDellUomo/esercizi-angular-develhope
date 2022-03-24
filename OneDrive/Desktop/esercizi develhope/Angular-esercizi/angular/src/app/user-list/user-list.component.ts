@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { iUser, Role, Gender } from "src/app/interface/interface.component";
 
 @Component({
