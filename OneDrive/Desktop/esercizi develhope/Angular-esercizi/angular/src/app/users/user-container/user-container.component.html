@@ -1,0 +1,4 @@
+<p class="abs">user-container.component</p>
+<app-user-list [showuserdetail]="true" (toggle)="toggle()"></app-user-list>
+<app-user-detail *ngIf="showuserdetail" (toggle)="toggle()"></app-user-detail>
+

@@ -1,1 +1,133 @@
-/* You can add global styles to this file, and also import other style files */
+nav a.active {
+    background-color: #039be5;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+nav {
+    width: 100%;
+    height: 5%;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: lightgreen;
+}
+body{
+    height: 110vh;
+    margin: 0;
+}
+div {
+    height: 100%;
+    width: 100%;
+}
+.abs {
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+}
+/* Users */
+
+app-users {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+app-user-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: lightblue;
+    margin: 0;
+    flex-wrap: wrap;
+}
+app-user-list {
+    display: flex;
+    flex-direction: column;
+    background-color: greenyellow;
+    height: 80%;
+    width: 45%;
+    align-items: center;
+}
+app-user-single {
+    display: flex;
+    background-color: orange;
+    align-items: center;
+    justify-content: space-around;
+    margin: 2%;
+    width: 45%;
+}
+app-user-detail {
+    display: flex;
+    background-color: yellow;
+    height: 80%;
+    width: 45%;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Order */
+
+app-orders {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: rosybrown;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+app-order-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rosybrown;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+app-order-list {
+    display: flex;
+    flex-direction: column;
+    background-color: lightblue;
+    height: 90%;
+    width: 90%;
+    align-items: center;
+}
+
+app-order-single {
+    display: flex;
+    background-color: purple;
+    align-items: center;
+    justify-content: space-around;
+    margin: 2%;
+    width: 90%;
+    height: 30%;
+    flex-wrap: wrap;
+}
+
+app-order-user-single {
+    display: flex;
+    background-color: yellow;
+    width: 30%;
+    justify-content: center;
+}
+
+app-order-detail {
+    display: flex;
+    background-color: lightgreen;
+    width: 30%;
+    justify-content: center;
+}
