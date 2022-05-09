@@ -1,0 +1,9 @@
+<h2>Ci sono {{ propertiesRoute.length }} proprietà</h2>
+<div>
+    <p>Properties: <span *ngFor="let property of propertiesRoute">"{{ property.name }}", </span> </p>
+</div>
+<h2>Apis Info</h2>
+<div *ngFor="let property of propertiesRoute">
+    <p>Name: {{ property.name }} </p>
+    <p>Endpoint: {{ property.endpoint }} </p>
+</div>
