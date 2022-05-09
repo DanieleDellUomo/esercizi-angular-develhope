@@ -1,5 +1,6 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { CounterserviceService } from '../counterservice.service';
 
 @Component({
   selector: 'app-edit-counter',
@@ -8,15 +9,14 @@ import { NgForm } from '@angular/forms';
 })
 export class EditCounterComponent implements OnInit {
 
-  @Output() submitValue = new EventEmitter<NgForm>(); 
 
-  constructor() { }
+  constructor( private subject : CounterserviceService ) {}
 
   ngOnInit(): void {
   }
 
   submit(form:NgForm){
-    this.submitValue.emit(form.value);
+    this.subject.setData(form.value.input);
   }
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { CounterserviceService } from '../counterservice.service';
 
 @Component({
@@ -6,17 +6,11 @@ import { CounterserviceService } from '../counterservice.service';
   templateUrl: './show-counter.component.html',
   styleUrls: ['./show-counter.component.css']
 })
-export class ShowCounterComponent implements OnInit {
+export class ShowCounterComponent{
 
-  counterValue = this.counter.getCounter();
+  value$ = this.subject.getData();
 
-  constructor(private counter: CounterserviceService) { }
+  constructor(private subject: CounterserviceService) { }
 
-  ngOnInit(): void {
-  }
   
-  updateCounter(){
-    this.counterValue = this.counter.getCounter();
-    return this.counterValue;
-  } 
 }

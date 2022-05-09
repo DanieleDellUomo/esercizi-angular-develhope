@@ -1,5 +1,5 @@
 <div>
     <h1>
-      Valore = <span *ngIf="updateCounter() == counterValue">{{ counterValue }} </span>
+      Valore = <span> {{ value$ | async }}</span>
     </h1>
   </div>

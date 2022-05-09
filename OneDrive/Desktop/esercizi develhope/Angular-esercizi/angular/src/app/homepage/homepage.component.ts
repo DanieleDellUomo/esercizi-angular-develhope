@@ -9,13 +9,10 @@ import { CounterserviceService } from '../counterservice.service';
 export class HomepageComponent implements OnInit {
 
 
-  constructor(private counter: CounterserviceService) { }
+  constructor() { }
 
 
   ngOnInit(): void {
   }
 
-  submitValue(sub: any){
-    this.counter.addCounter(sub.value);
-  }
 }

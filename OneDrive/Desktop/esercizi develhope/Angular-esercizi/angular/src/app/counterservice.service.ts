@@ -1,25 +1,26 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CounterserviceService {
 
-  constructor() { }
+  private subject = new BehaviorSubject<number>(0);
 
-  private counter = 0;
+  constructor() {}
 
-  getCounter(): number {
-    return this.counter;
-  }
-
-  addCounter(value = 1) {
-    this.counter += +value;
-    console.log('added ', value,'= ', this.counter);
-    if (this.counter < 0) {
-      console.error('Error: Counter non può essere negativo');
-      this.counter = 0;
+  setData(dataValue: number) {
+    const totValue = this.subject.value + dataValue;
+    if(totValue > 0){
+    this.subject.next(totValue);}
+    else {
+    this.subject.next(0);
+    console.error("Error: il valore da aggiungere non può essere negativo");
     }
   }
 
+  getData(): Observable<number>{
+    return this.subject;
+  }
 }
