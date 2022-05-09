@@ -1,0 +1,27 @@
+<div>
+    <h2>Beer Shop</h2>
+    <form #f="ngForm">
+        <label for="beersList">Scegli la tua birra:</label>
+        <select name="beers" id="beersList" required (click)="checkType()" [(ngModel)]="name">
+            <ng-container *ngFor="let beer of all">
+                <option value="{{ beer.name }}" id="beerSelect">{{ beer.name }}</option>
+            </ng-container>
+        </select>
+        <label for="typeList">Scegli la grandezza:</label>
+        <select name="types" id="typeList" required [(ngModel)]="type">
+            <option value="small" [disabled]="type !== 'small'">Small</option>
+            <option value="medium" [disabled]="type !== 'medium'">Medium</option>
+        </select>
+        <button (click)="getBeerF()" [disabled]="!f.form.valid">Search</button>
+    </form>
+  
+    <ng-container *ngIf="selectedBeers">
+        <div>
+            <div class="card" *ngFor="let beer of selectedBeers">
+                <p>Name: {{ beer.name }}</p>
+                <p>Type: {{ beer.type }}</p>
+                <p>Price: {{ beer.price }}€</p>
+            </div>
+        </div>
+    </ng-container>
+</div>
