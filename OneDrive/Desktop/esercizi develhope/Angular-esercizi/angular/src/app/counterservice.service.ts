@@ -9,7 +9,11 @@ export class CounterserviceService {
   private subject = new BehaviorSubject<number>(0);
 
   constructor() {}
-
+  
+  getData(): Observable<number>{
+    return this.subject;
+  }
+  
   setData(dataValue: number) {
     const totValue = this.subject.value + dataValue;
     if(totValue > 0){
@@ -20,7 +24,5 @@ export class CounterserviceService {
     }
   }
 
-  getData(): Observable<number>{
-    return this.subject;
-  }
+  
 }
